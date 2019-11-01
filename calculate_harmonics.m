@@ -1,6 +1,7 @@
 clear;
 clf;
-addpath('../../../');
+addpath('/hhgmax/');
+% addpath('/laser_propagation/build/');
 
 
 % open distance

@@ -1,0 +1,69 @@
+[propagation]
+starting_distance = 0
+ending_distance = 4
+num_reports_cheap = 40
+num_reports_expensive = 4
+
+[time]
+N = 2048
+time_min = -100e-15
+time_max = 200e-15
+wavelength_min = 150e-9
+wavelength_max = 4e-6
+
+[space]
+N = 200
+radius_max = 12e-3
+
+[filtering]
+time_filter_min = -50e-15
+time_filter_max = 100e-15
+wavelength_filter_min = 200e-9
+wavelength_filter_max = 3e-6
+
+[ode]
+absolute_error = 1e6
+relative_error = 0
+first_step = 1e-2
+
+[laser]
+type = gaussian
+length = 20e-15
+waist = 4e-3
+wavelength = 800e-9
+focus = 2
+energy = 1e-3
+chirp = 0
+phase_deg = 0
+delay = 0
+
+[medium]
+type = freespace
+index = air
+pressure = 1
+
+[kerr]
+n2 = 8e-24
+
+[ionization]
+generate = ionization.txt
+formula = ilkov
+ionizing_fraction = 0.2
+density_of_neutrals = 2.5e25
+collision_time = 350e-15
+ionization_potential = 1.933779e-18
+
+
+[results]
+temporal_field = E
+spectral_field = A
+electron_density = Rho
+distance = distance.dat
+time = time.dat
+radius = radius.dat
+omega = omega.dat
+kperp = kperp.dat
+wavelength = wavelength.dat
+energy = energy.dat
+max_intensity = max_intensity.dat
+max_density = max_density.dat
