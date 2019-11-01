@@ -161,7 +161,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])
   if (mxGetNumberOfDimensions(prhs[1]) != 2) mexErrMsgTxt("Et must be a matrix.");
   const mwSize *EtDim = mxGetDimensions(prhs[1]);
   dim = EtDim[0];
-  if (EtDim[1] != N || dim < 1 || dim > 3) mexErrMsgTxt("Et must have shape dimensions x numel(t), with dimensions = 1/2/3.");
+  if (EtDim[2] != N || dim < 1 || dim > 3) mexErrMsgTxt("Et must have shape dimensions x numel(t), with dimensions = 1/2/3.");
 
   // make sure t(1) is zero
   if (abs(t[0]) > 1e-20) mexErrMsgTxt("t(1) must be zero.");
