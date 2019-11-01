@@ -2,10 +2,10 @@
 
 # build laser_propagation
 cd laser_propagation && \
-# mkdir build && \
+mkdir build && \
 cd build && \
-# cmake .. && \
-# make && \
+cmake .. && \
+make && \
 
 # return to main directory
 cd ../../ && \
